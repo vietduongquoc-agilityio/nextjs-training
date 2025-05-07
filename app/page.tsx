@@ -2,6 +2,7 @@ import PageDashboard from "./ui/dashboard/over-view/page";
 import "@/app/ui/global.css";
 import { Suspense } from "react";
 import { Video } from "./ui/video";
+import React from "react";
 
 export const experimental_ppr = true;
 export default async function Page() {

@@ -8,7 +8,6 @@ import { Bounce, ToastContainer } from "react-toastify";
 
 import React from "react";
 import { ThemeProvider } from "next-themes";
-import Layout from "./test";
 
 export const metadata: Metadata = {
   title: {
@@ -21,19 +20,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} antialiased`}>
-        {/* <ThemeProvider
+        <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        > */}
-        <Layout>
+        >
           <aside className="dark:bg-gray-800">
             <Link
               className="mb-2 flex h-20 items-end justify-start rounded-md bg-blue-600 p-4 md:h-40"
@@ -63,8 +61,7 @@ export default function RootLayout({
             pauseOnHover
             transition={Bounce}
           />
-          {/* </ThemeProvider> */}
-        </Layout>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -141,14 +141,15 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
         </div>
       </div>
       <div className="mt-6 flex justify-end gap-4">
-        {/* <Link
+        <Link
           href="/ui/invoices"
           className="flex h-10 items-center rounded-lg bg-gray-100 px-4 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-200"
-        > */}
-        <Button>Cancel</Button>
-        {/* </Link> */}
-        {/* <Button onClick={handleSubmit} type="submit"> */}
-        <Button>Create Invoice</Button>
+        >
+          Cancel
+        </Link>
+        <Button onClick={handleSubmit} type="submit">
+          Create Invoice
+        </Button>
       </div>
     </form>
   );

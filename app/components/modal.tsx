@@ -7,7 +7,6 @@ import { toast } from "react-toastify";
 import Checkboxes from "./checkbox";
 import BasicRating from "./rating";
 
-
 interface CustomModalProps {
   showModal: boolean;
   setShowModal: (value: boolean) => void;

@@ -5,12 +5,13 @@ import { Video } from "./ui/video";
 import React from "react";
 import Form from "./components/invoiceForm";
 import Pagination from "./ui/invoices/pagination";
+import PageDashboard from "@/app/ui/dashboard/over-view/page";
 
 export const experimental_ppr = true;
 export default async function Page() {
   return (
     <main className="">
-      {/* <PageDashboard /> */}
+      <PageDashboard />
       <div className="flex min-h-screen flex-col p-4">
         <Suspense fallback={<p>Loading video...</p>}>
           <Video />
